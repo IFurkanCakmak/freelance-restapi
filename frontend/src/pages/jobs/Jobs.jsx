@@ -1,7 +1,10 @@
 import React from 'react'
 import './Jobs.scss'
-export const Jobs = () => {
+
+
+ const Jobs = () => {
   return (
     <div className='jobs'>Jobs</div>
   )
 }
+export default Jobs
