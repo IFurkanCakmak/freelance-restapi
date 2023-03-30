@@ -1,0 +1,91 @@
+.main {
+  height: 600px;
+  display: flex;
+  background-image: url(/images/video.gif);
+  background-position: center;
+  justify-content: center;
+  color: white;
+  margin-right: -8px;
+  margin-left: -8px;
+
+  .container {
+    width: 1400px;
+    align-items: center;
+    display: flex;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-left: 80px;
+
+      h1 {
+        font-size: 50px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        text-shadow: 4px 4px black;
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 50px;
+        margin-top: -15px;
+        .searchInput {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+          }
+
+          input {
+            border: none;
+            outline: none;
+
+            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+              "Lucida Sans", Arial, sans-serif;
+          }
+        }
+      }
+      button {
+        width: 120px;
+        height: 50px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        background-color: rgb(2, 13, 50);
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+    }
+    .popular {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 330px;
+
+      button {
+        color: white;
+        background-color: rgb(2, 13, 50);
+        border: 1px solid white;
+        padding: 10px 30px;
+        border-radius: 50px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        width: fit-content;
+      }
+    }
+  }
+}
+
+.button:hover{
+  background-color: white;
+}
