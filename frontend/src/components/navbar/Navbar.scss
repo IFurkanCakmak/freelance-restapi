@@ -12,6 +12,7 @@
   transition: 0.5s all ease;
   position: sticky;
   top: 0;
+ margin-top:-10px;
   
   &.active{
     background-color: white;
@@ -99,8 +100,9 @@
     padding: 10px 0px;
     display: flex;
     justify-content: space-between;
-    color: rgba(255, 255, 255, 0.734);
+    color: rgb(0, 0, 0);
     font-weight: 300;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 8px;
   }
 }
