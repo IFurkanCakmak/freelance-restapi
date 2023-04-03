@@ -2,9 +2,11 @@ import React from 'react'
 import './Home.scss'
 import { Main } from '../../components/main/Main'
 import Slides from '../../components/slides/Slides';
-import { cards } from '../../data'
+import { cards, projects } from '../../data'
 import CatCard from '../../components/catCard/CatCard'
 import DiscoverProducts from '../../components/discoverProducts/DiscoverProducts';
+import ProjectCard from '../../components/projectCard/ProjectCard';
+import SeeFreelancers from '../../components/seeFreelancers/SeeFreelancers';
 
 
 const Home = () => {
@@ -15,6 +17,12 @@ const Home = () => {
       <Slides slidesToShow={5} arrowsScroll={1}>
         {cards.map(card=>(
           <CatCard key={card.id} item={card}/>
+        ))}
+      </Slides>
+      <SeeFreelancers/>
+       <Slides slidesToShow={4} arrowsScroll={4}>
+        {projects.map(card=>(
+          <ProjectCard key={card.id} item={card}/>
         ))}
       </Slides>
     </div>
