@@ -1,12 +1,12 @@
 import React from 'react'
 import "./Main.scss"
 
-export const Main = () => {
+ export const Main = () => {
   return (
     <div className='main'>
     
         <div className='container'>
-            <div className='left'>
+            <div className='base'>
                 <h1>Find the perfect freelance services for your business</h1>
                 <div className='search'>
                     <div className='searchInput'>
@@ -16,10 +16,11 @@ export const Main = () => {
                     <button>Search</button>
                 </div>
                 <div className='popular'>
-                    <button>Web Development</button>
-                    <button>Design</button>
+                    <button>Web Design</button>
+                    <button>Shopify</button>
                     <button>SEO</button>
-                    <button>Marketing</button>
+                    <button>Content</button>
+                    <button>Music</button>
                 </div>
             </div>
         </div>
