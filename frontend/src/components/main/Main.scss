@@ -12,12 +12,13 @@
     width: 1400px;
     align-items: center;
     display: flex;
+    justify-content: center;
     
-    .left {
+    .base {
       display: flex;
       flex-direction: column;
       gap: 30px;
-      margin-left: 80px;
+      justify-content: center;
 
       h1 {
         font-size: 50px;
@@ -31,7 +32,7 @@
         justify-content: space-between;
         background-color: white;
         border-radius: 50px;
-        margin-top: -15px;
+        margin-top: -30px;
         .searchInput {
           display: flex;
           align-items: center;
@@ -69,10 +70,12 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-left: 330px;
+     justify-content: center;
+      margin-bottom: 60px;
 
       button {
         color: white;
+        justify-content: center;
         background-color: rgb(2, 13, 50);
         border: 1px solid white;
         padding: 10px 30px;
@@ -80,7 +83,10 @@
         font-size: 16px;
         cursor: pointer;
         text-align: center;
-        width: fit-content;       
+        width: fit-content;
+        :hover{
+          background-color: white;
+        }       
       }
     }
   }
