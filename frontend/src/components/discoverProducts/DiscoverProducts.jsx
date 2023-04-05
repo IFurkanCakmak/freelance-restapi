@@ -5,7 +5,7 @@ const DiscoverProducts = () => {
   return (
     <div className='discoverProducts'>
         <div className='container'>
-            <p>Discover Categories</p>
+            <p>Explore Categories</p>
         </div>
     </div>
   )
