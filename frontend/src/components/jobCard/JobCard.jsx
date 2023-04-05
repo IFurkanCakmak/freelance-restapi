@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const JobCard = ({ item }) => {
   return (
-    <Link to="/job/123">
+    <Link to="/job/123" className="link">
       <div className="jobCard">
         <img src={item.img} alt="" />
         <div className="info">
@@ -20,6 +20,7 @@ const JobCard = ({ item }) => {
         </div>
         <hr />
         <div className="details">
+        <img src="./img/heart.png" alt="" />
           <div className="price">
             <span>Starting at</span>
             <h2>${item.price}</h2>
