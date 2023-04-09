@@ -7,11 +7,12 @@ const Job = () => {
     <div className="job">
       <div className="container">
         <div className="left">
-          <span className="littleCat">Jobook - Web Design</span>
+          <span className="littleCat">Jobook / Web Design</span>
           <h1>I can create your e commerce website</h1>
 
           <div className="user">
             <img
+            className="profilePhoto"
               src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt=""
             />
@@ -25,7 +26,7 @@ const Job = () => {
               <span>5</span>
             </div>
           </div>
-          <Slider slidesToShow={1} arrowScroll={1}>
+          <Slider slidesToShow={1} arrowScroll={1} className="slider">
             <img
               src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
               alt=""
@@ -111,7 +112,7 @@ const Job = () => {
             <h2>Reviews</h2>
             <div className="item">
               <div className="user">
-                <img  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
+                <img className="profilePhoto" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
                 <div className="info">
                   <span>John Doe</span>
                   <div className="country">
@@ -147,7 +148,7 @@ const Job = () => {
             <hr/>
             <div className="item">
               <div className="user">
-                <img  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
+                <img className="profilePhoto" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
                 <div className="info">
                   <span>John Doe</span>
                   <div className="country">
@@ -183,7 +184,7 @@ const Job = () => {
             <hr/>
             <div className="item">
               <div className="user">
-                <img  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
+                <img className="profilePhoto" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
                 <div className="info">
                   <span>John Doe</span>
                   <div className="country">
@@ -219,7 +220,7 @@ const Job = () => {
             <hr/>
             <div className="item">
               <div className="user">
-                <img  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
+                <img className="profilePhoto" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
                 <div className="info">
                   <span>John Doe</span>
                   <div className="country">
