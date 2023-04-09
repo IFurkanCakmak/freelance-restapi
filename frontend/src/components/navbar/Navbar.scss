@@ -1,21 +1,20 @@
-
 .navbar {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color:rgb(2, 13, 50);
+
+  background-color: rgb(2, 13, 50);
   color: white;
   margin-left: -8px;
   margin-right: -8px;
   transition: 0.5s all ease;
   position: sticky;
   top: 0;
- margin-top:-12px;
- z-index: 999;
-  
-  &.active{
+  margin-top: -12px;
+  z-index: 999;
+
+  &.active {
     background-color: white;
     color: black;
   }
@@ -28,7 +27,6 @@
     .logo {
       font-size: 40px;
       font-weight: bold;
-      
     }
     .links {
       display: flex;
@@ -36,22 +34,21 @@
       align-items: center;
       font-weight: 550;
 
-      .user{
+      .user {
         display: flex;
         align-items: center;
         gap: 10px;
         cursor: pointer;
         position: relative;
 
-        img{
+        img {
           width: 32px;
           height: 32px;
           border-radius: 50%;
           object-fit: cover;
         }
 
-
-        .options{
+        .options {
           position: absolute;
           top: 50px;
           right: 0;
@@ -66,11 +63,8 @@
           font-size: 15px;
           font-weight: 300;
           width: 180px;
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
       }
-
-
 
       button {
         color: white;
@@ -79,9 +73,8 @@
         border: 1px solid white;
         cursor: pointer;
         background-color: transparent;
-        
 
-        &:hover{
+        &:hover {
           background-color: teal;
           border-color: teal;
         }
@@ -89,21 +82,20 @@
     }
   }
 
-    hr {
+  hr {
     width: calc(92% - 2px);
     height: 0;
     border-top: 0.1px solid #ebe9e9;
     border-bottom: 0.1px solid #ebe9e9;
-    
   }
-  .menu{
-     width: 1400px;
+  .menu {
+    width: 1400px;
     padding: 10px 0px;
     display: flex;
     justify-content: space-between;
     color: rgb(0, 0, 0);
     font-weight: 300;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
     margin-bottom: 8px;
   }
 }

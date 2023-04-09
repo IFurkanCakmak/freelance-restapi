@@ -7,13 +7,13 @@
   color: white;
   margin-right: -8px;
   margin-left: -8px;
-   
+
   .container {
     width: 1400px;
     align-items: center;
     display: flex;
     justify-content: center;
-    
+
     .base {
       display: flex;
       flex-direction: column;
@@ -22,8 +22,6 @@
 
       h1 {
         font-size: 50px;
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif;
         text-shadow: 4px 4px black;
       }
       .search {
@@ -41,15 +39,12 @@
           img {
             width: 20px;
             height: 20px;
-            margin: 10px;           
+            margin: 10px;
           }
 
           input {
             border: none;
             outline: none;
-
-            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-              "Lucida Sans", Arial, sans-serif;
           }
         }
       }
@@ -62,15 +57,13 @@
         background-color: rgb(2, 13, 50);
         border-top-right-radius: 50px;
         border-bottom-right-radius: 50px;
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif;
       }
     }
     .popular {
       display: flex;
       align-items: center;
       gap: 10px;
-     justify-content: center;
+      justify-content: center;
       margin-bottom: 60px;
 
       button {
@@ -84,9 +77,9 @@
         cursor: pointer;
         text-align: center;
         width: fit-content;
-        :hover{
+        :hover {
           background-color: white;
-        }       
+        }
       }
     }
   }
