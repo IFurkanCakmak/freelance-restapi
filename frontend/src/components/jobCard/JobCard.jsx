@@ -20,7 +20,7 @@ const JobCard = ({ item }) => {
         </div>
         <hr />
         <div className="details">
-        <img src="./img/heart.png" alt="" />
+        <img src="/images/heart.png" alt="" />
           <div className="price">
             <span>Starting at</span>
             <h2>${item.price}</h2>
