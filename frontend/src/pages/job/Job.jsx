@@ -255,7 +255,42 @@ const Job = () => {
             </div>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <div className="price">
+            <h3>1 Page website</h3>
+            <h2>$20.99</h2>
+          </div>
+          <p>I can create your website </p>
+          <div className="details">
+          <div className="item">
+            <img src="/images/clock.png" alt=""/>
+            <span>2 Days delivery</span>
+          </div>
+          <div className="item">
+            <img src="/images/recycle.png" alt=""/>
+            <span>2 revisions</span>
+          </div>
+          </div>
+          <div className="features">
+            <div className="item">
+              <img src="/images/greencheck.png" alt=""/>
+              <span>Development</span>
+            </div>
+            <div className="item">
+              <img src="/images/greencheck.png" alt=""/>
+              <span>Development</span>
+            </div>
+            <div className="item">
+              <img src="/images/greencheck.png" alt=""/>
+              <span>Development</span>
+            </div>
+            <div className="item">
+              <img src="/images/greencheck.png" alt=""/>
+              <span>Development</span>
+            </div>
+          </div>
+          <button>Continue</button>
+        </div>
       </div>
     </div>
   );
