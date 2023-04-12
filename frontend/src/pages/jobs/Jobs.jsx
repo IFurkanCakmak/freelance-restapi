@@ -3,6 +3,8 @@ import './Jobs.scss'
 import { jobs } from '../../data';
 import JobCard from "../../components/jobCard/JobCard"
 
+ 
+
  const Jobs = () => {
 
   const [sort, setSort]= useState("sales");
@@ -17,7 +19,7 @@ import JobCard from "../../components/jobCard/JobCard"
   return (
     <div className='jobs'>
       <div className='container'>
-        <span className='littlecat'>Jobook - Web Design</span>
+        <span className='littlecat'>Jobook &gt; Web Design</span>
         <h1>Web Developers</h1>
         <p>Explore the freelancers</p>
         <div className='menu'>

@@ -7,7 +7,7 @@ const Job = () => {
     <div className="job">
       <div className="container">
         <div className="left">
-          <span className="littleCat">Jobook / Web Design</span>
+          <span className="littleCat">Jobook &gt; Web Design</span>
           <h1>I can create your e commerce website</h1>
 
           <div className="user">
