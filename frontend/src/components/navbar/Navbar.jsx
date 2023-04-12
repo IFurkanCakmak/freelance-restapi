@@ -26,10 +26,11 @@ import { Link, useLocation } from "react-router-dom";
     id:1,
     username:"Mada Faka",
     isSeller:true,
-  }
+  };
+  
   return (
     /*if its scrolled its gonna be navbar active otherwise navbar*/
-    /* if path is home nav is active if not its active*/
+    /* if path is home nav is active if not its deactive*/
     <div className={active || pathname !=="/" ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
