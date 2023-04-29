@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from "react";
 import './Navbar.scss'
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import newRequest from "../../utils/newRequest";
 
 
   const Navbar = () => {
@@ -22,12 +23,20 @@ import { Link, useLocation } from "react-router-dom";
   };
   }, []);
 
-  const currentUser = {
-    id:1,
-    username:"Mada Faka",
-    isSeller:true,
-  };
-  
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  const navigate = useNavigate();
+  const handleLogout = async () =>{
+
+    try {
+      await newRequest.post("/auth/logout");
+      localStorage.setItem("currentUser", null);
+      navigate("/")
+    } catch (err) {
+      console.log(err)
+    }
+
+  }  
   return (
     /*if its scrolled its gonna be navbar active otherwise navbar*/
     /* if path is home nav is active if not its deactive*/
@@ -48,7 +57,7 @@ import { Link, useLocation } from "react-router-dom";
           {!currentUser && <button>Join</button>}
           {currentUser&& (
             <div className="user" onClick={()=>setOpen(!open)}>
-              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""/>
+              <img src= {currentUser.img || "/images/noimage.jpg"} alt=""/>
               <span>{currentUser?.username}</span>
               {open && <div className="options">
                 {
@@ -63,7 +72,7 @@ import { Link, useLocation } from "react-router-dom";
                 <Link to="/orders" className="link">Orders</Link>
                 <Link to ="/messages" className="link">Messages</Link>
                 <Link to="/settings" className="link">Settings</Link>
-                <Link to="/" className="link">Logout</Link>
+                <Link onClick={handleLogout} className="link">Logout</Link>
               </div>}
             </div>
           )}
