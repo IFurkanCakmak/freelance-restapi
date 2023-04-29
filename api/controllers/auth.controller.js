@@ -7,8 +7,7 @@ export const register = async (req, res, next) => {
   try {
     const hash = bcrypt.hashSync(
       req.body
-        .password /* body after req means send data by user input to body in mongo db */,
-      7
+        .password ,7 /* body after req means send data by user input to body in mongo db */
     ); /* password hashed in db  */
     const newUser = new User({
       ...req.body /* spread object , that says take everything inside body objject outside */,
