@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   
     form {
       width: 360px;
@@ -11,8 +12,9 @@
       gap: 20px;
   
       h1 {
-        color: gray;
+        color: black;
         margin-bottom: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       }
   
       label {
@@ -32,8 +34,9 @@
         color: white;
         font-weight: 500;
         font-size: 18px;
-        background-color: #1dbf73;
+        background-color: rgb( 2 13 50);
         cursor: pointer;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       }
   
       span{
