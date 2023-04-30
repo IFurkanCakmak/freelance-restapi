@@ -24,7 +24,7 @@ export const register = async (req, res, next) => {
 export const login = async (req, res, next) => {
   try {
     const user = await User.findOne({
-      username: req.body.username,
+      username: req.body.username
     }); /* find user by find function in mongo */
 
     if (!user) return next(createError(404, "User not found"));
