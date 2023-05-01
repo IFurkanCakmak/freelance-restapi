@@ -65,7 +65,7 @@ deliveryTime:{
 
 revisionNumber:{
     type:Number,
-    required,
+    required:true
 },
 
 features:{
