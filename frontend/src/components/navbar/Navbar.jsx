@@ -52,7 +52,7 @@ import newRequest from "../../utils/newRequest";
           <span>Business</span>
           <span>Explore</span>
           <span>English</span>
-          <span>Sign in</span>
+          <Link to="/login" className="link">Sign in</Link>
           {!currentUser?.isSeller &&<span>Make money</span>}
           {!currentUser && <button>Join</button>}
           {currentUser&& (
