@@ -12,8 +12,8 @@ const router = express.Router()
 
 router.post("/" , verifyToken, createJob )
 router.delete("/:id" , verifyToken, deleteJob )
-router.get("/single/:id" , verifyToken, getJob )
-router.get("/" , verifyToken, getJobs )
+router.get("/single/:id" , getJob )
+router.get("/" , getJobs )
 
 
 export default router;
