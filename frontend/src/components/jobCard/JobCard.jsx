@@ -14,14 +14,14 @@ const JobCard = ({ item }) => {
   });
 
   return (
-    <Link to="/job/123" className="link">
+    <Link to={`/job/${item._id}`} className="link">
       <div className="jobCard">
         <img src={item.cover} alt="" />
         <div className="info">
           {isLoading ? (
             "loading"
           ) : error ? (
-            "sometghin went wrong "
+            "something went wrong "
           ) : (
             <div className="user">
               <img src={data.img || "/images/noimage.jpg"} alt="" />
