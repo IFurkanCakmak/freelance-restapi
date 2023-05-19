@@ -32,7 +32,7 @@ export const deleteJob = async (req, res, next) => {
 };
 export const getJob = async (req, res, next) => {
   try {
-    const Job = await Job.findById(req.params.id);
+    const job = await Job.findById(req.params.id);
     if (!job) next(createError(404, "Job not found!"));
     res.status(200).send(job);
   } catch (err) {
