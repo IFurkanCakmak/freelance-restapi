@@ -26,7 +26,7 @@ const Messages = () => {
     },
 
     onSuccess:()=>{
-      queryClient.invalidateQueries(("conversations"))
+      queryClient.invalidateQueries(["conversations"])
     }
   })
 
