@@ -1,123 +1,82 @@
 import React from "react";
 import "./Message.scss";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import  newRequest from "../../utils/newRequest"
 
 const Message = () => {
+  const { id } = useParams();
+  const currentUser =JSON.parse(localStorage.getItem("currentUser"));
+
+  const queryClient = useQueryClient();
+
+  const { isLoading, error, data } = useQuery({
+    queryKey: ["messages"],
+    queryFn: () =>
+      newRequest.get(`/messages/${id}`).then((res) => {
+        return res.data;
+      }),
+  });
+
+  const mutation = useMutation({
+    mutationFn: (message) =>{
+      return newRequest.post(`/messages`, message);
+    },
+
+    onSuccess:()=>{
+      queryClient.invalidateQueries(["messages"])
+    }
+  })
+
+  const handleSubmit = (e) => {
+    e.preventDefault() /* preventDefault is used for not refresh the page */
+mutation.mutate({
+  conversationId:id,
+  desc:e.target[0].value,
+});
+e.target[0].value= "";
+  };
+
   return (
     <div className="message">
       <div className="container">
         <span className="littleCat">
-          <Link to="/messages" className="link">MESSAGES</Link> &gt; JOHN DOE &gt;
+          <Link to="/messages" className="link">
+            MESSAGES
+          </Link>{" "}
+          &gt; JOHN DOE &gt;
         </span>
-        <div className="messages">
-          <div className="item">
-            <img
-              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <p>
-              Loreasmodomqwmodmqodomomwdqmod wqdnısagyudqwuygu gudwq jwdqııo
-              hdwqhioodiwh qohsdssddwq ıqwdıuqwıdudqwubdwqbb
-              bdsuqduıwqhudqhuwıdwhusadasdk odwjq ıdsadspdwqkpkdqwk kd wqkop
-              kpowqkpodkop dk qkokwqd
-            </p>
+        {isLoading ? (
+          "loading"
+        ) : error ? (
+          "Something went wrong"
+        ) : (
+          <div className="messages">
+         {data.map((m)=> (
+
+           <div className={m.userId === currentUser._id ? "seller item" :"item"} key={m._id}>
+              <img
+                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <p>
+            {m.desc}
+              </p>
+            </div>
+            )) }
           </div>
-          <div className="item seller">
-            <img
-              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <p>
-              Loreasmodomqwmodmqodomomwdqmod wqdnısagyudqwuygu gudwq jwdqııo
-              hdwqhioodiwh qohsdssddwq ıqwdıuqwıdudqwubdwqbb
-              bdsuqduıwqhudqhuwıdwhusadasdk odwjq ıdsadspdwqkpkdqwk kd wqkop
-              kpowqkpodkop dk qkokwqd
-            </p>
-          </div>
-          <div className="item">
-            <img
-              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <p>
-              Loreasmodomqwmodmqodomomwdqmod wqdnısagyudqwuygu gudwq jwdqııo
-              hdwqhioodiwh qohsdssddwq ıqwdıuqwıdudqwubdwqbb
-              bdsuqduıwqhudqhuwıdwhusadasdk odwjq ıdsadspdwqkpkdqwk kd wqkop
-              kpowqkpodkop dk qkokwqd
-            </p>
-          </div>
-          <div className="item seller">
-            <img
-              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <p>
-              Loreasmodomqwmodmqodomomwdqmod wqdnısagyudqwuygu gudwq jwdqııo
-              hdwqhioodiwh qohsdssddwq ıqwdıuqwıdudqwubdwqbb
-              bdsuqduıwqhudqhuwıdwhusadasdk odwjq ıdsadspdwqkpkdqwk kd wqkop
-              kpowqkpodkop dk qkokwqd
-            </p>
-          </div>
-          <div className="item">
-            <img
-              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <p>
-              Loreasmodomqwmodmqodomomwdqmod wqdnısagyudqwuygu gudwq jwdqııo
-              hdwqhioodiwh qohsdssddwq ıqwdıuqwıdudqwubdwqbb
-              bdsuqduıwqhudqhuwıdwhusadasdk odwjq ıdsadspdwqkpkdqwk kd wqkop
-              kpowqkpodkop dk qkokwqd
-            </p>
-          </div>
-          <div className="item seller">
-            <img
-              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <p>
-              Loreasmodomqwmodmqodomomwdqmod wqdnısagyudqwuygu gudwq jwdqııo
-              hdwqhioodiwh qohsdssddwq ıqwdıuqwıdudqwubdwqbb
-              bdsuqduıwqhudqhuwıdwhusadasdk odwjq ıdsadspdwqkpkdqwk kd wqkop
-              kpowqkpodkop dk qkokwqd
-            </p>
-          </div>
-          <div className="item">
-            <img
-              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <p>
-              Loreasmodomqwmodmqodomomwdqmod wqdnısagyudqwuygu gudwq jwdqııo
-              hdwqhioodiwh qohsdssddwq ıqwdıuqwıdudqwubdwqbb
-              bdsuqduıwqhudqhuwıdwhusadasdk odwjq ıdsadspdwqkpkdqwk kd wqkop
-              kpowqkpodkop dk qkokwqd
-            </p>
-          </div>
-          <div className="item seller">
-            <img
-              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-            <p>
-              Loreasmodomqwmodmqodomomwdqmod wqdnısagyudqwuygu gudwq jwdqııo
-              hdwqhioodiwh qohsdssddwq ıqwdıuqwıdudqwubdwqbb
-              bdsuqduıwqhudqhuwıdwhusadasdk odwjq ıdsadspdwqkpkdqwk kd wqkop
-              kpowqkpodkop dk qkokwqd
-            </p>
-          </div>
-        </div>
-        <hr/>
-        <div className="write">
+        )}
+        <hr />
+        <form className="write" onSubmit={handleSubmit}>
           <textarea
-            name=""
-            id=""
+            type="text"
+            
             placeholder="Write a message"
             cols="30"
             rows="10"
-          ></textarea>
-          <button>Send</button>
-        </div>
+         />
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
   );
