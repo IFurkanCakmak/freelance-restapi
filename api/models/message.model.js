@@ -4,17 +4,17 @@ const { Schema } = mongoose;
 const messageSchema = new Schema({
 
     conversationId:{
-        typeof:String,
+        type:String,
         required:true
     },
 
     userId:{
-        typeof:String,
+        type:String,
         required:true
     },
 
     desc:{
-        typeof:String,
+        type:String,
         required:true
     },
 
