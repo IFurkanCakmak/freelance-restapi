@@ -22,7 +22,7 @@ const Reviews = ({ jobId }) => {
     },
 
     onSuccess:()=>{
-      queryClient.invalidateQueries(("reviews"))
+      queryClient.invalidateQueries(["reviews"])
     }
   })
 

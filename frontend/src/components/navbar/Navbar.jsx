@@ -54,7 +54,7 @@ import newRequest from "../../utils/newRequest";
           <span>English</span>
           <Link to="/login" className="link">Sign in</Link>
           {!currentUser?.isSeller &&<span>Make money</span>}
-          {!currentUser && <button>Join</button>}
+          {!currentUser && <Link to ="/register"><button>Join</button></Link>}
           {currentUser&& (
             <div className="user" onClick={()=>setOpen(!open)}>
               <img src= {currentUser.img || "/images/noimage.jpg"} alt=""/>
