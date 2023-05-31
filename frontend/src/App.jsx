@@ -18,6 +18,9 @@ import {
   QueryClientProvider,
  
 } from "@tanstack/react-query";
+import Payment from "./pages/payment/Payment";
+import Success from "./pages/success/Success";
+
 
 function App() {
   const queryClient = new QueryClient();
@@ -71,6 +74,11 @@ function App() {
           path: "/job/:id",
           element: <Job />,
         },
+        
+        {
+          path: "/success",
+          element: <Success />,
+        },
       ],
     },
     {
@@ -80,6 +88,10 @@ function App() {
     {
       path: "/login",
       element: <Login />,
+    },
+    {
+      path: "/payment/:id",
+      element: <Payment />,
     },
   ]);
 
