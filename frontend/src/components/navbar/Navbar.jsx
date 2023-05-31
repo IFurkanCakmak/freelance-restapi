@@ -49,12 +49,8 @@ import newRequest from "../../utils/newRequest";
         
         </div>
         <div className="links">
-          <span>Business</span>
-          <span>Explore</span>
-          <span>English</span>
-          <Link to="/login" className="link">Sign in</Link>
-          {!currentUser?.isSeller &&<span>Make money</span>}
-          {!currentUser && <Link to ="/register"><button>Join</button></Link>}
+          {!currentUser &&<span> <Link to="/login" className="link">Giriş</Link></span>}
+          {!currentUser && <Link to ="/register"><button>Kayıt ol</button></Link>}
           {currentUser&& (
             <div className="user" onClick={()=>setOpen(!open)}>
               <img src= {currentUser.img || "/images/noimage.jpg"} alt=""/>
@@ -63,16 +59,16 @@ import newRequest from "../../utils/newRequest";
                 {
                   currentUser?.isSeller&&(
                     <>
-                      <Link to="/myjobs" className="link">Jobs</Link>
-                      <Link to="/add" className="link">Add new job</Link>
+                      <Link to="/myjobs" className="link">İlanlarım</Link>
+                      <Link to="/add" className="link">Yeni ilan ekle</Link>
                     </>
                   )
                 }
                 
-                <Link to="/orders" className="link">Orders</Link>
-                <Link to ="/messages" className="link">Messages</Link>
-                <Link to="/settings" className="link">Settings</Link>
-                <Link onClick={handleLogout} className="link">Logout</Link>
+                <Link to="/orders" className="link">Siparişler</Link>
+                <Link to ="/messages" className="link">Mesajlar</Link>
+                {/* <Link to="/settings" className="link">Settings</Link> */}
+                <Link onClick={handleLogout} className="link">Çıkış</Link>
               </div>}
             </div>
           )}
@@ -82,32 +78,32 @@ import newRequest from "../../utils/newRequest";
       <>
       <hr />
       <div className="menu">
-      <Link className="link menuLink" to="/">
-              Graphics & Design
+      <Link className="link menuLink" to="http://localhost:5173/jobs?cat=digital">
+              Dijital Pazarlama
+            </Link>
+            <Link className="link menuLink" to="http://localhost:5173/jobs?cat=translate"> 
+              Çeviri
+            </Link>
+            <Link className="link menuLink" to="http://localhost:5173/jobs?cat=content">
+              İçerik Üretimi
+            </Link>
+            <Link className="link menuLink" to="http://localhost:5173/jobs?cat=web">
+             Web Geliştirme
             </Link>
             <Link className="link menuLink" to="/">
-              Video & Animation
+              Video ve Animasyon
+            </Link>
+            <Link className="link menuLink" to="http://localhost:5173/jobs?cat=music">
+              Müzik ve Seslendirme
             </Link>
             <Link className="link menuLink" to="/">
-              Writing & Translation
+              Ürün Yönetimi
             </Link>
-            <Link className="link menuLink" to="/">
-              AI Services
+            <Link className="link menuLink" to="http://localhost:5173/jobs?cat=seo">
+              SEO
             </Link>
-            <Link className="link menuLink" to="/">
-              Digital Marketing
-            </Link>
-            <Link className="link menuLink" to="/">
-              Music & Audio
-            </Link>
-            <Link className="link menuLink" to="/">
-              Programming & Tech
-            </Link>
-            <Link className="link menuLink" to="/">
-              Business
-            </Link>
-            <Link className="link menuLink" to="/">
-              Lifestyle
+            <Link className="link menuLink" to="http://localhost:5173/jobs?cat=design">
+              Grafik Tasarım
             </Link>
       </div>
       </>

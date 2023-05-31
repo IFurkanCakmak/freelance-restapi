@@ -6,7 +6,7 @@ const SeeFreelancers = () => {
   return (
     <div className='seeFreelancers'>
         <div className='container'>
-            <p>See services that freelancers provide</p> 
+            <p>Freelancerları keşfedin</p> 
         </div>
     </div>
   )

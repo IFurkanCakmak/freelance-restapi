@@ -24,7 +24,7 @@ const Reviews = ({ jobId }) => {
     onSuccess:()=>{
       queryClient.invalidateQueries(["reviews"])
     }
-  })
+  });
 
   const handleSubmit = e=> {
     e.preventDefault ()
