@@ -58,8 +58,8 @@ function Register() {
     <div className="register">
       <form onSubmit={handleSubmit}>
         <div className="left">
-          <h1>Create a new account</h1>
-          <label htmlFor="">Username</label>
+          <h1>Kayıt olun</h1>
+          <label htmlFor="">Kullanıcı adı</label>
           <input
             name="username"
             type="text"
@@ -74,38 +74,38 @@ function Register() {
             placeholder="email"
             onChange={handleChange}
           />
-          <label htmlFor="">Password</label>
+          <label htmlFor="">Şifrenizi girin</label>
           <input name="password" type="password" onChange={handleChange} />
-          <label htmlFor="">Profile Picture</label>
+          <label htmlFor="">Fotoğraf ekleyin</label>
           <input type="file" onChange={(e)=>setFile(e.target.files[0])}/>
-          <label htmlFor="">Country</label>
+          <label htmlFor="">Ülke</label>
           <input
             name="country"
             type="text"
             placeholder="Usa"
             onChange={handleChange}
           />
-          <button type="submit">Register</button>
+          <button type="submit">Kaydı tamamla</button>
         </div>
         <div className="right">
-          <h1>I want to become a seller</h1>
+          <h1>Freelancer olmak istiyorum</h1>
           <div className="toggle">
-            <label htmlFor="">Activate the seller account</label>
+            <label htmlFor="">Freelancer olarak kayıt ol</label>
             <label className="switch">
               <input type="checkbox" onChange={handleSeller}/>
               <span className="slider round"></span>
             </label>
           </div>
-          <label htmlFor="">Phone Number</label>
+          <label htmlFor="">Telefon numarası</label>
           <input
             name="phone"
             type="text"
             placeholder="+1 234 567 89"
             onChange={handleChange}
           />
-          <label htmlFor="">Description</label>
+          <label htmlFor="">Açıklama</label>
           <textarea
-            placeholder="A short description of yourself"
+            placeholder="Kendiniz ile ilgili kısa bir açıklama yazın"
             name="desc"
             id=""
             cols="30"
