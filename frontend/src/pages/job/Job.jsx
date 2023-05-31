@@ -1,14 +1,15 @@
 import React from "react";
 import "./Job.scss";
 import Slider from "infinite-react-carousel";
-import { useParams } from "react-router-dom";
+import { useParams, Link} from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest.js";
 import Reviews from "../../components/reviews/Reviews";
 
+
 function Job() {
   const { id } = useParams();
-
+  
   const { isLoading, error, data } = useQuery({
     queryKey: ["job"],
     queryFn: () =>
@@ -33,6 +34,8 @@ function Job() {
       enabled: !!userId,  /* runs this query only when userId exists */
   });
 
+
+
   return (
     <div className="job">
       {isLoading ? (
@@ -42,7 +45,7 @@ function Job() {
       ) : (
         <div className="container">
           <div className="left">
-            <span className="littleCat">Jobook &gt; Web Design</span>
+            <span className="littleCat">Jobook &gt; {data.cat}</span>
             <h1>{data.title}</h1>
 
             {isLoadingUser ? (
@@ -65,7 +68,7 @@ function Job() {
                         <img src="/images/star.png" alt="" key={i} />
                       ))}
                     <span>
-                      {Math.round(data.totalStars / data.starNumber)}/5
+                      {Math.round(data.totalStars / data.starNumber)}
                     </span>
                   </div>
                 )}
@@ -76,7 +79,7 @@ function Job() {
                 <img key={img} src={img} alt="" />
               ))}
             </Slider>
-            <h2>About This Work</h2>
+            <h2>Bu hizmet hakkında</h2>
             <p>{data.desc}</p>
             
               
@@ -85,7 +88,7 @@ function Job() {
             ) : errorUser ? (
               "Something went wrong"
             ) : (<div className="seller">
-              <h2>About the seller</h2>
+              <h2>Freelancer hakkında</h2>
               <div className="user">
                 <img
                   src={dataUser.img || "/images/noimage.jpg"}
@@ -101,34 +104,34 @@ function Job() {
                           <img src="/images/star.png" alt="" key={i} />
                         ))}
                       <span>
-                        {Math.round(data.totalStars / data.starNumber)}/5
+                        {Math.round(data.totalStars / data.starNumber)}
                       </span>
                     </div>
                   )}
-                  <button>Message</button>
+                 {/*  <button>Message</button> */}
                 </div>
               </div>
               <div className="box">
                 <div className="items">
                   <div className="item">
-                    <span className="title">From</span>
+                    <span className="title">Ülke</span>
                     <span className="desc">{dataUser.country}</span>
                   </div>
                   <div className="item">
-                    <span className="title">Member since</span>
-                    <span className="desc">Aug 2022</span>
+                    <span className="title">Şu tarihten beri üye</span>
+                    <span className="desc">Haz 2023</span>
                   </div>
                   <div className="item">
-                    <span className="title">Avg. response time</span>
-                    <span className="desc">4 hours</span>
+                    <span className="title">Ortalama cevap süresi</span>
+                    <span className="desc">1 saat</span>
                   </div>
                   <div className="item">
-                    <span className="title">Last delivery</span>
-                    <span className="desc">1 day</span>
+                    <span className="title">Ortalama teslimat süresi</span>
+                    <span className="desc">2 gün</span>
                   </div>
                   <div className="item">
-                    <span className="title">Languages</span>
-                    <span className="desc">English</span>
+                    <span className="title">Diller</span>
+                    <span className="desc">Türkçe , İngilizce</span>
                   </div>
                 </div>
                 <hr />
@@ -143,17 +146,17 @@ function Job() {
           <div className="right">
             <div className="price">
               <h3>{data.shortTitle}</h3>
-              <h2>$ {data.price}</h2>
+              <h2>₺{data.price}</h2>
             </div>
             <p>{data.shortDesc}</p>
             <div className="details">
               <div className="item">
                 <img src="/images/clock.png" alt="" />
-                <span>{data.deliveryTime} Days delivery</span>
+                <span>{data.deliveryTime} Günde teslimat</span>
               </div>
               <div className="item">
                 <img src="/images/recycle.png" alt="" />
-                <span>{data.revisionNumber} revisions</span>
+                <span>{data.revisionNumber} Revize</span>
               </div>
             </div>
             <div className="features">
@@ -164,7 +167,10 @@ function Job() {
                 </div>
               ))}
             </div>
-            <button>Continue</button>
+            <Link to={`/payment/${id}`} className="link">
+            <button>Devam et</button>
+            </Link>
+            
           </div>
         </div>
       )}

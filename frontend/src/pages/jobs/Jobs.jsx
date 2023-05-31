@@ -6,6 +6,7 @@ import newRequest from "../../utils/newRequest.js";
 import { useLocation } from "react-router-dom";
 
 
+
 const Jobs = () => {
   const [sort, setSort] = useState("sales");
   const [open, setOpen] = useState(false);
@@ -39,25 +40,27 @@ const Jobs = () => {
 
   const apply = () =>{
     refetch()
-  }
+  };
+
+  
 
   return (
     <div className="jobs">
       <div className="container">
-        <span className="littlecat">Jobook &gt; Web Design</span>
-        <h1>Web Developers</h1>
-        <p>Explore the freelancers</p>
+          <span className="littlecat">Jobook &gt; Keşfedin </span>
+        <h1>İlanlar</h1>
+        <p>Freelancerları keşfedin</p>
         <div className="menu">
           <div className="left">
-            <span>Budget : </span>
+            <span>Fiyat : </span>
             <input ref={minRef} type="number" placeholder="min" />
             <input ref={maxRef} type="number" placeholder="max" />
-            <button onClick={apply}>Apply</button>
+            <button onClick={apply}>Uygula</button>
           </div>
           <div className="right">
-            <span className="sortBy">Sort : </span>
+            <span className="sortBy">Sırala : </span>
             <span className="sortType">
-              {sort === "sales" ? "Best Selling" : "Latest"}
+              {sort === "sales" ? "Puana göre" : "En güncel"}
             </span>
             <img
               src="./images/down.png"
@@ -67,11 +70,10 @@ const Jobs = () => {
             {open && (
               <div className="rightMenu">
                 {sort === "sales" ? (
-                  <span onClick={() => reSort("createdAt")}>Latest</span>
+                  <span onClick={() => reSort("createdAt")}>En güncel</span>
                 ) : (
-                  <span onClick={() => reSort("sales")}>Best Selling</span>
+                  <span onClick={() => reSort("sales")}>Puana göre</span>
                 )}
-                <span onClick={() => reSort("sales")}>Popular</span>
               </div>
             )}
           </div>
