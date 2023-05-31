@@ -8,62 +8,51 @@ function Footer() {
       <div className="container">
         <div className="top">
           <div className="item">
-            <h2>Categories</h2>
-            <span>Graphics & Design</span>
-            <span>Digital Marketing</span>
-            <span>Writing & Translation</span>
-            <span>Video & Animation</span>
-            <span>Music & Audio</span>
-            <span>Programming & Tech</span>
-            <span>Data</span>
-            <span>Business</span>
-            <span>Lifestyle</span>
-            <span>Photography</span>
-            <span>Sitemap</span>
+            <h2>Kategoriler</h2>
+            <span>Dijital Pazarlama</span>
+            <span>Çeviri</span>
+            <span>İçerik Üretimi</span>
+            <span>Web Geliştirme</span>
+            <span>Video ve animasyon</span>
+            <span>Müzik ve Seslendirme</span>
+            <span>E-Ticaret</span>
+            <span>İş geliştrime</span>
+            <span>Ürün Yönetimi</span>
+            <span>Grafik Tasarım</span>
+            <span>SEO</span>
           </div>
           <div className="item">
-            <h2>About</h2>
+            <h2>Hakkımızda</h2>
             <span>Press & News</span>
-            <span>Partnerships</span>
-            <span>Privacy Policy</span>
-            <span>Terms of Service</span>
-            <span>Intellectual Property Claims</span>
-            <span>Investor Relations</span>
-            <span>Contact Sales</span>
+            <span>Ortaklıklar</span>
+            <span>Gizlilik Politikası</span>
+            <span>Kullanım Koşulları</span>
+            <span>Satışçılarla İletişim</span>
           </div>
           <div className="item">
-            <h2>Support</h2>
-            <span>Help & Support</span>
-            <span>Trust & Safety</span>
-            <span>Selling on Liverr</span>
-            <span>Buying on Liverr</span>
+            <h2>Destek</h2>
+            <span>Yardım ve Destek</span>
+            <span>Satış yapın</span>
+            <span>Hizmet alın</span>
           </div>
           <div className="item">
-            <h2>Community</h2>
-            <span>Customer Success Stories</span>
-            <span>Community hub</span>
+            <h2>Topluluk</h2>
+            <span>Paylaşım</span>
             <span>Forum</span>
-            <span>Events</span>
+            <span>Etkinlikler</span>
             <span>Blog</span>
-            <span>Influencers</span>
-            <span>Affiliates</span>
+            <span>İş Ortakları</span>
             <span>Podcast</span>
-            <span>Invite a Friend</span>
-            <span>Become a Seller</span>
-            <span>Community Standards</span>
+            <span>Davet et</span>
+            <span>ilan Verin</span>
           </div>
           <div className="item">
-            <h2>More From Jobook</h2>
+            <h2>Daha Fazla</h2>
             <span>Jobook Business</span>
             <span>Jobook Pro</span>
-            <span>Jobook Logo Maker</span>
             <span>Jobook Guides</span>
-            <span>Get Inspired</span>
-            <span>Jobook Select</span>
-            <span>ClearVoice</span>
+            <span>İlham Alın</span>
             <span>Jobook Workspace</span>
-            <span>Learn</span>
-            <span>Working Not Working</span>
           </div>
         </div>
         <hr />
@@ -75,21 +64,20 @@ function Footer() {
           </div>
           <div className="right">
             <div className="social">
-              <img src="/img/twitter.png" alt="" />
-              <img src="/img/facebook.png" alt="" />
-              <img src="/img/linkedin.png" alt="" />
-              <img src="/img/pinterest.png" alt="" />
-              <img src="/img/instagram.png" alt="" />
+              <img src="/images/twitter.png" alt="" />
+              <img src="/images/facebook.png" alt="" />
+              <img src="/images/linkedin.png" alt="" />
+              <img src="/images/instagram.png" alt="" />
             </div>
             <div className="link">
-              <img src="/img/language.png" alt="" />
-              <span>English</span>
+              <img src="/images/language.png" alt="" />
+              <span>Türkçe</span>
             </div>
             <div className="link">
-              <img src="/img/coin.png" alt="" />
-              <span>USD</span>
+              <img src="/images/coin.png" alt="" />
+              <span>TL</span>
             </div>
-            <img src="/img/accessibility.png" alt="" />
+            <img src="/images/accessibility.png" alt="" />
           </div>
         </div>
       </div>
