@@ -47,14 +47,14 @@ const Orders = () => {
       ) : (
         <div className="container">
           <div className="title">
-            <h1>Orders</h1>
+            <h1>Siparişlerim</h1>
           </div>
           <table>
             <tr>
-              <th>Image</th>
-              <th>Title</th>
-              <th>Price</th>
-              <th>Contact</th>
+              <th>Kapak resmi</th>
+              <th>Başlık</th>
+              <th>Fiyat</th>
+              <th>Satıcıyla iletişime geç</th>
             </tr>
             {data.map((order) => (
               <tr key={order._id}>
