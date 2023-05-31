@@ -42,9 +42,9 @@ e.target[0].value= "";
       <div className="container">
         <span className="littleCat">
           <Link to="/messages" className="link">
-            MESSAGES
+            MESAJLAR
           </Link>{" "}
-          &gt; JOHN DOE &gt;
+          &gt; 
         </span>
         {isLoading ? (
           "loading"
@@ -56,7 +56,7 @@ e.target[0].value= "";
 
            <div className={m.userId === currentUser._id ? "seller item" :"item"} key={m._id}>
               <img
-                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="/images/noimage.jpg"
                 alt=""
               />
               <p>
@@ -75,7 +75,7 @@ e.target[0].value= "";
             cols="30"
             rows="10"
          />
-          <button type="submit">Send</button>
+          <button type="submit">Gönder</button>
         </form>
       </div>
     </div>

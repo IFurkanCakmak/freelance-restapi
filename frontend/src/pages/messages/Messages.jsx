@@ -43,14 +43,14 @@ mutation.mutate(id);
       ) : (
         <div className="container">
           <div className="title">
-            <h1>Messages</h1>
+            <h1>Mesajlar</h1>
           </div>
           <table>
             <tr>
-              <th>{currentUser.isSeller ? "Buyer" : "Seller"}</th>
-              <th>Last message</th>
-              <th>Date</th>
-              <th>Action</th>
+              <th>{currentUser.isSeller ? "Müşteri" : "Satıcı"}</th>
+              <th>Son mesaj</th>
+              <th>Tarih</th>
+              <th>İşlem</th>
             </tr>
             {data.map((c) => (
               <tr className={((currentUser.isSeller && !c.readBySeller) ||
@@ -65,7 +65,7 @@ mutation.mutate(id);
                 <td>
                   {((currentUser.isSeller && !c.readBySeller) ||
                     (!currentUser.isSeller && !c.readByBuyer)) && (
-                      <button onClick={()=>handleRead(c.id)}>Mark as read</button>
+                      <button onClick={()=>handleRead(c.id)}>Okundu olarak işaretle</button>
                     )}
                     {/* if we are seller readbyseller will be false in this case we will see the button if readbyseller is true already seen the message so button wont display */}
 

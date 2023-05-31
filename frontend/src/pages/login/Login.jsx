@@ -24,8 +24,8 @@ function Login() {
   return (
     <div className="login">
       <form onSubmit={handleSubmit}>
-        <h1>Sign in</h1>
-        <label htmlFor="">Username</label>
+        <h1>Giriş yap</h1>
+        <label htmlFor="">Kullancı adı</label>
         <input
           name="johndoe"
           type="text"
@@ -33,14 +33,14 @@ function Login() {
           onChange={(e) => setUsername(e.target.value)}
         />
 
-        <label htmlFor="">Password</label>
+        <label htmlFor="">Şifre</label>
         <input
           name="password"
           type="password"
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button type="submit">Login</button>
+        <button type="submit">Giriş</button>
         {error && error}
       </form>
     </div>
