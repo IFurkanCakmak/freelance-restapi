@@ -35,17 +35,17 @@ const Reviews = ({ jobId }) => {
 
   return (
     <div className="reviews">
-      <h2>Reviews</h2>
+      <h2>Yorumlar</h2>
       {isLoading
         ? "loading"
         : error
         ? "Something went wrong"
         : data.map((review) => <Review key={review._id} review={review} />)}
         <div className="add">
-          <h3>Write a review</h3>
+          <h3>Yorum yazın</h3>
           <form action="" className="addForm" onSubmit={handleSubmit}>
-          <input type="text" placeholder="Write your thoughts"/>
-          Rate :
+          <input type="text" placeholder=" Bu hizmetle ilgili düşüncelerinizi yazın"/>
+          Puan :
           <select name="" id="">
             <option value={1}>1</option>
             <option value={2}>2</option>
@@ -53,7 +53,7 @@ const Reviews = ({ jobId }) => {
             <option value={4}>4</option>
             <option value={5}>5</option>
           </select>
-          <button>Send</button>
+          <button>Gönder</button>
           </form>
         </div>
     </div>

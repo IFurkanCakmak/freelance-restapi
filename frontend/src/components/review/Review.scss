@@ -54,6 +54,30 @@
 
         img{
             width: 15px;
+            cursor: pointer;
+        }
+        
+        .green-btn{
+            background-color: green;
+            border: none;
+            border-radius: 100%;
+            
+        }
+        .white-btn{
+            background-color: white;
+            border: none;
+        
+        }
+
+        .red-btn{
+            background-color: red;
+            border: none;
+            border-radius: 100%;
+        
+        }
+
+        span{
+            margin-top: -4px;
         }
     }
 }

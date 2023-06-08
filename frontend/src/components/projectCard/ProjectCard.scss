@@ -23,10 +23,11 @@
       width: 50px;
       height: 50px;
       object-fit: cover;
+      border-radius: 50%;
     }
     .texts {
       h2 {
-        font-size: 17px;
+        font-size: 13px;
         font-weight: bold;
         margin-top: 4px;
       }
@@ -34,6 +35,7 @@
         font-size: 14px;
         font-weight: 300;
         margin: 2px;
+        border-radius: 50%;
       }
     }
   }

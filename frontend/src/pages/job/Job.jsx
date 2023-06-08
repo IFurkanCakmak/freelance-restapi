@@ -45,7 +45,7 @@ function Job() {
       ) : (
         <div className="container">
           <div className="left">
-            <span className="littleCat">Jobook &gt; {data.cat}</span>
+            <span className="littleCat">Jobook &gt; {data.shortTitle}</span>
             <h1>{data.title}</h1>
 
             {isLoadingUser ? (

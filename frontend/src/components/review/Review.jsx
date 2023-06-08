@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Review.scss";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
@@ -11,6 +11,21 @@ const Review = ({ review }) => {
         return res.data;
       }),
   });
+
+
+
+  const [active, setActive] = useState(false);
+  const like = () => {
+    setActive(!active);
+  };
+
+  const [normal, setNormal] = useState(false);
+  const dislike = () => {
+    setNormal(!normal);
+  };
+
+
+
   return (
     <div className="review">
       {isLoading ? (
@@ -42,11 +57,21 @@ const Review = ({ review }) => {
       </div>
       <p>{review.desc}</p>
       <div className="helpful">
-        <span>Helpful?</span>
-        <img src="/images/like.png" />
-        <span>Yes</span>
+        <span>Bu yorum faydalı oldu mu?</span>
+        <button
+          onClick={like}
+          className={active ? "green-btn" : "white-btn"}
+        >
+          <img src="/images/like.png" />
+        </button>
+
+        <span>Evet</span>
+        <button  onClick={dislike}
+          className={normal? "red-btn" : "white-btn"}>
         <img src="/images/dislike.png" />
-        <span>No</span>
+        </button>
+        
+        <span>Hayır</span>
       </div>
     </div>
   );

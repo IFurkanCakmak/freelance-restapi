@@ -4,7 +4,7 @@ import "./ProjectCard.scss"
 
 const ProjectCard = ({item}) => {
   return (
-    <Link to="/" className='link'>
+    <Link to={`/job/${item.page}`} className='link'>
         <div className='projectCard'>
         <img src={item.img} alt=''/>
         <div className='info'>
@@ -21,3 +21,4 @@ const ProjectCard = ({item}) => {
 }
 
 export default ProjectCard
+

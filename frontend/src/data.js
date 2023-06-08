@@ -1,82 +1,89 @@
 export const cards = [
     {
       id: 1,
-      title: "AI Artists",
-      desc: "Add talent to AI",
-      img: "https://images.pexels.com/photos/7532110/pexels-photo-7532110.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      title: "Web Geliştirme",
+      desc: "Markanızı kusursuz bir web sitesiyle güçlendirin",
+      img: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      cat:"web",
+      
     },
     {
       id: 2,
-      title: "Logo Design",
-      desc: "Build yor brand",
-      img: "https://images.pexels.com/photos/11295165/pexels-photo-11295165.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      title: "Grafik Tasarım",
+      desc: "İnsanları size yönlendirecek tasarımlar",
+      img: "https://images.pexels.com/photos/414974/pexels-photo-414974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      cat:"design"
     },
     {
       id: 3,
-      title: "WordPress",
-      desc: "Customize your site",
-      img: "https://images.pexels.com/photos/4371669/pexels-photo-4371669.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      title: "SEO",
+      desc: "Markanız arama motorlarında daha kolay bulunsun",
+      img: "https://images.pexels.com/photos/218717/pexels-photo-218717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      cat:"seo"
     },
     {
       id: 4,
-      title: "Voice Over",
-      desc: "Share your message",
-      img: "https://images.pexels.com/photos/7608079/pexels-photo-7608079.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      title: "Müzik ve Seslendirme",
+      desc: "Profesyonel bir sanatçıyla marka değerinizi yükseltin",
+      img: "https://images.pexels.com/photos/1493004/pexels-photo-1493004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      cat:"music"
     },
     {
       id: 5,
-      title: "Video Explainer",
-      desc: "Engage your audience",
-      img: "https://images.pexels.com/photos/13388047/pexels-photo-13388047.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      title: "Çeviri",
+      desc: "Markanızı farklı dillerde tüm dünyaya sunun",
+      img: "https://images.pexels.com/photos/5238118/pexels-photo-5238118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      cat:"translate"
     },
     {
       id: 6,
-      title: "Social Media",
-      desc: "Reach more customers",
-      img: "https://images.pexels.com/photos/11378899/pexels-photo-11378899.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      title: "İçerik Üretimi",
+      desc: "Kaliteli içeriklerle üst sıralarda yer alın",
+      img: "https://images.pexels.com/photos/1766604/pexels-photo-1766604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      cat:"content"
     },
     {
       id: 7,
-      title: "SEO",
-      desc: "Unlock growth online",
-      img: "https://images.pexels.com/photos/4820241/pexels-photo-4820241.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+      title: "Dijital Pazarlama",
+      desc: "Reklamlar ile doğru kitlenin karşısına çıkın",
+      img: "https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      cat:"digital"
     },
-    {
-      id: 8,
-      title: "Illustration",
-      desc: "Color you dreams",
-      img: "https://images.pexels.com/photos/15032623/pexels-photo-15032623.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    },
+   
   ];
   
   export const projects = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/1462935/pexels-photo-1462935.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      img: "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600",
       pp: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      cat: "Web and Mobile Design",
-      username: "Anna Bell",
+      cat: "Web Geliştirme",
+      username: "Ayşe",
+      page:"647fa3a6e9a2fe52cbcf97e2"
     },
     {
       id: 2,
-      img: "https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      pp: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      cat: "Logo Design",
-      username: "Morton Green",
+      img: "http://res.cloudinary.com/furkan13/image/upload/v1686086081/thesis/ezom6uobnnzz9zhyqhle.jpg",
+      pp: "http://res.cloudinary.com/furkan13/image/upload/v1685485348/thesis/hburrzwpv7xgcli1wyz5.jpg",
+      cat: "Web Tasarımı",
+      username: "Cem",
+      page:"647fd331e9a2fe52cbcf9ac5"
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      pp: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      cat: "Animated GIFs",
-      username: "Emmett Potter",
+      img: "http://res.cloudinary.com/furkan13/image/upload/v1685488371/thesis/melunmrulxz9iyltihlt.jpg",
+      pp: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      cat: "Müzik ve Seslendirme",
+      username: "Ayşe",
+      page:"64768321a0389f67ecc9ee3b"
     },
     {
       id: 4,
-      img: "https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      pp: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      cat: "Packaging Design",
-      username: "Freddie Johnston",
+      img: "http://res.cloudinary.com/furkan13/image/upload/v1686086079/thesis/r25cefopfltinonpbkqz.jpg",
+      pp: "http://res.cloudinary.com/furkan13/image/upload/v1685484956/thesis/tb2mc6hao76tjfhgxp2c.jpg",
+      cat: "Web Geliştirme",
+      username: "Mehmet",
+      page:"647fa21fe9a2fe52cbcf97b7"
     },
     {
       id: 5,
@@ -107,3 +114,5 @@ export const cards = [
       username: "Ward Brewer",
     },
   ];
+
+  

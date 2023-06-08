@@ -54,7 +54,7 @@ const Orders = () => {
               <th>Kapak resmi</th>
               <th>Başlık</th>
               <th>Fiyat</th>
-              <th>Satıcıyla iletişime geç</th>
+              <th>{currentUser.isSeller ? "Müşteri ile iletişime geç" : "Satıcıyla iletişime geç"}</th>
             </tr>
             {data.map((order) => (
               <tr key={order._id}>
